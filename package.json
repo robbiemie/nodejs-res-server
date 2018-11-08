@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-res-server",
+  "version": "1.0.0",
+  "description": "nodejs 搭建静态资源服务器",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "node ./src/index.js",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang657850144/nodejs-res-server.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Charles Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yang657850144/nodejs-res-server/issues"
+  },
+  "homepage": "https://github.com/yang657850144/nodejs-res-server#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
+}
