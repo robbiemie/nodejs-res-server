@@ -28,6 +28,8 @@
   "homepage": "https://github.com/yang657850144/nodejs-res-server#readme",
   "dependencies": {},
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
     "pre-commit": "^1.2.2"
   }
 }

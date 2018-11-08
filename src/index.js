@@ -1,2 +1,1 @@
-console.log('',);
-aysad()
+console.log('');
