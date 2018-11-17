@@ -23,7 +23,7 @@ module.exports = async (req, res, reqPath) => {
     } else if (status.isDirectory()) {
       const files = await readdir(reqPath)
       res.statusCode = 200
-      res.setHeader('Content-Type', `text/html;charset=utf8;`)
+      res.setHeader('Content-Type', 'text/html;charset=utf8;')
       const root = path.relative(config.root, reqPath)
       const html = template({
         files,
