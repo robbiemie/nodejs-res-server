@@ -1,1 +1,14 @@
-# nodejs 搭建静态资源服务器
+# static resource server for nodejs
+
+## Install
+
+```
+$ npm i nodejs-static-server --save
+```
+
+
+## Usage
+
+```
+$ npm run dev
+```
