@@ -9,10 +9,10 @@ module.exports = (rs, req, res) => {
   if (!accept || !accept.match(reg)) {
     return rs
   } else if (accept.match(/\bgzip\b/)) {
-    res.setHeader('content-encoding', `gzip`)
+    res.setHeader('content-encoding', 'gzip')
     return rs.pipe(createGzip())
   } else {
-    res.setHeader('content-encoding', `deflate`)
+    res.setHeader('content-encoding', 'deflate')
     return rs.pipe(createDeflate())
   }
 }
