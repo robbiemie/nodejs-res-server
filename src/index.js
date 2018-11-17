@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
   })
 })
 
-server.listen(config.port, config.hostname, _ => {
+server.listen(config.port, config.hostname, () => {
   const addr = `http://${config.hostname}:${config.port}`
   console.log(`Server is running in ${chalk.green(addr)}`)
 })
