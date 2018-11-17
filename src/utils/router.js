@@ -6,6 +6,7 @@ const promisify = require('util').promisify
 const config = require('../config/getConfig')
 const tplPath = path.join(config.root, './src/template/dir.hbs')
 const mime = require('../config/mime')
+const compress = require('./compress')
 const stat = promisify(fs.stat)
 const readdir = promisify(fs.readdir)
 const source = fs.readFileSync(tplPath)
@@ -19,7 +20,12 @@ module.exports = async (req, res, reqPath) => {
       res.statusCode = 200
       res.setHeader('Content-Type', `${mimeType};charset=utf8;`)
       // 异步读取流文件
-      fs.createReadStream(reqPath).pipe(res)
+      let rs = fs.createReadStream(reqPath)
+      // 文件压缩
+      if (config.compress(reqPath)) {
+        rs = compress(rs, req, res)
+      }
+      rs.pipe(res)
     } else if (status.isDirectory()) {
       const files = await readdir(reqPath)
       res.statusCode = 200
