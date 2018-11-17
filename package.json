@@ -26,7 +26,9 @@
     "url": "https://github.com/yang657850144/nodejs-res-server/issues"
   },
   "homepage": "https://github.com/yang657850144/nodejs-res-server#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
